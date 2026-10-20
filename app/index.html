@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restauradores de la Memoria | Colegio Tom Adams IED</title>
+  <meta name="description" content="Portal del Proyecto Restauradores de la Memoria y del Museo Escolar de la Memoria del Colegio Tom Adams IED, Kennedy, Bogotá.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23a8432a'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='%23f6f1e7' font-family='Georgia'%3ERM%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- ================= ENCABEZADO ================= -->
+  <header class="encabezado" id="encabezado">
+    <div class="contenedor encabezado__fila">
+      <a href="#inicio" class="marca" aria-label="Restauradores de la Memoria, ir al inicio">
+        <span class="marca__sello" aria-hidden="true">RM</span>
+        <span class="marca__texto">Restauradores<br><small>de la Memoria</small></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="menu" id="menu" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#proyecto">El proyecto</a></li>
+          <li><a href="#museo">Museo Escolar</a></li>
+          <li><a href="#salidas">Salidas</a></li>
+          <li><a href="#fechas">Fechas</a></li>
+          <li><a href="#eventos">Visitas y eventos</a></li>
+          <li><a href="#reconocimientos">Reconocimientos</a></li>
+          <li><a href="#alianzas">Alianzas</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="museo.html" class="menu__destacado">Museo virtual 3D</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- ================= 1. INICIO ================= -->
+    <section class="hero" id="inicio">
+      <div class="hero__fondo" aria-hidden="true"></div>
+      <div class="contenedor hero__contenido">
+        <p class="sobretitulo">Colegio Tom Adams IED · Kennedy, Bogotá</p>
+        <h1>Restauradores<br>de la Memoria</h1>
+        <p class="hero__lema">"Quien no conoce su historia está condenado a repetirla."</p>
+        <p class="hero__texto">Estudiantes que investigan, narran y transforman en arte la memoria del conflicto y de su territorio, para construir paz desde la escuela.</p>
+        <div class="hero__acciones">
+          <a href="museo.html" class="btn btn--primario">Entrar al museo virtual</a>
+          <a href="#proyecto" class="btn btn--claro">Conocer el proyecto</a>
+        </div>
+      </div>
+      <div class="contenedor">
+        <ul class="cifras" aria-label="El proyecto en cifras">
+          <li><strong data-contar="2018">0</strong><span>año de inicio</span></li>
+          <li><strong data-contar="5">0</strong><span>versiones del Museo Escolar</span></li>
+          <li><strong data-contar-tabla="Eventos">0</strong><span>eventos registrados</span></li>
+          <li><strong data-contar-tabla="Aliados">0</strong><span>aliados institucionales</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= 2. QUÉ ES ================= -->
+    <section class="seccion" id="proyecto">
+      <div class="contenedor">
+        <header class="seccion__cabeza">
+          <p class="sobretitulo">¿Qué es Restauradores de la Memoria?</p>
+          <h2>Una escuela que recuerda, narra y resignifica</h2>
+        </header>
+        <div class="dos-columnas">
+          <div class="texto-largo">
+            <p>Restauradores de la Memoria es un proyecto pedagógico del Colegio Tom Adams IED que convierte el aula en un lugar de memoria. Sus estudiantes investigan los hechos del conflicto armado colombiano y la historia de su barrio, escuchan a las víctimas y a la comunidad, y transforman lo aprendido en obras, objetos, historietas, danzas y exposiciones.</p>
+            <p>Su antecedente es la exposición <em>"Escuelas que recuerdan, narran y resignifican la guerra"</em>, presentada en la Feria del Libro de Bogotá en 2018. Desde entonces el proyecto ha crecido con el <strong>Museo Escolar de la Memoria</strong>, las salidas pedagógicas a lugares de memoria y un <strong>Museo Virtual</strong> que lleva la experiencia a cualquier pantalla.</p>
+          </div>
+          <ul class="pilares">
+            <li><span class="pilares__num">01</span><h3>Investigar</h3><p>Testimonios, archivos y recorridos por lugares de memoria.</p></li>
+            <li><span class="pilares__num">02</span><h3>Narrar</h3><p>Radio, cómic, cartografías y relatos del territorio.</p></li>
+            <li><span class="pilares__num">03</span><h3>Crear</h3><p>Esculturas, tejidos, altares, teatro y danza.</p></li>
+            <li><span class="pilares__num">04</span><h3>Divulgar</h3><p>Muestras comunitarias, exposiciones y museo virtual.</p></li>
+          </ul>
+        </div>
+        <h3 class="subtitulo">Línea del tiempo</h3>
+        <ol class="linea" id="lineaTiempo"></ol>
+      </div>
+    </section>
+
+    <!-- ================= 3. MUSEO ESCOLAR ================= -->
+    <section class="seccion seccion--oscura" id="museo">
+      <div class="contenedor">
+        <header class="seccion__cabeza">
+          <p class="sobretitulo">Componente principal</p>
+          <h2>Museo Escolar de la Memoria</h2>
+          <p>Cada año la comunidad educativa abre un museo vivo: objetos, retratos, obras y presentaciones artísticas que honran a las víctimas y cuentan la historia del territorio. En 2025 llegó a su quinta versión con el acompañamiento del Centro Nacional de Memoria Histórica.</p>
+        </header>
+        <div class="objetos" id="listaObjetos"></div>
+
+        <div class="videos">
+          <div class="videos__tabs" role="tablist" aria-label="Videos resumen del Museo Escolar">
+            <button role="tab" aria-selected="true" data-video="-O6inKLKRRI">2025</button>
+            <button role="tab" aria-selected="false" data-video="7KZMLHnJLM8">2023</button>
+            <button role="tab" aria-selected="false" data-video="EvR31L2aH44">2021</button>
+          </div>
+          <div class="videos__marco" id="videoMarco">
+            <button class="videos__portada" id="videoPortada" style="background-image:url(img/muestra-13.jpg)">
+              <span class="play" aria-hidden="true">▶</span>
+              <span>Ver video resumen 2025</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="cta-virtual">
+          <img src="img/virtual-3.jpg" alt="Sala del Museo Virtual de la Memoria con alfombra roja y obras en las paredes" loading="lazy">
+          <div>
+            <h3>Museo Virtual de la Memoria</h3>
+            <p>Recorre en 3D las salas del museo: fotografías de las salidas pedagógicas, la muestra comunitaria, la historieta y objetos digitalizados por los estudiantes con fotogrametría. Funciona en computador, celular y gafas de realidad virtual.</p>
+            <div class="hero__acciones">
+              <a href="museo.html" class="btn btn--primario">Recorrer en A-Frame</a>
+              <a href="https://edu.cospaces.io/SRH-SUX" class="btn btn--claro" target="_blank" rel="noopener">Versión CoSpacesEdu</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. SALIDAS PEDAGÓGICAS ================= -->
+    <section class="seccion" id="salidas">
+      <div class="contenedor">
+        <header class="seccion__cabeza">
+          <p class="sobretitulo">Lugares de memoria</p>
+          <h2>Salidas pedagógicas</h2>
+          <p>Aprender la historia caminándola. Los estudiantes recorren el Eje de la Memoria y la Paz, el Centro de Memoria, Paz y Reconciliación y otros lugares de la ciudad para escuchar, preguntar y registrar.</p>
+        </header>
+        <div class="salidas" id="listaSalidas"></div>
+        <div class="tira" id="tiraSalidas"></div>
+      </div>
+    </section>
+
+    <!-- ================= 5. FECHAS CONMEMORATIVAS ================= -->
+    <section class="seccion seccion--papel" id="fechas">
+      <div class="contenedor">
+        <header class="seccion__cabeza">
+          <p class="sobretitulo">Calendario de la memoria</p>
+          <h2>Fechas conmemorativas</h2>
+        </header>
+        <div class="proxima" id="proximaFecha" aria-live="polite"></div>
+        <ul class="fechas" id="listaFechas"></ul>
+      </div>
+    </section>
+
+    <!-- ================= 6. VISITAS Y EVENTOS ================= -->
+    <section class="seccion" id="eventos">
+      <div class="contenedor">
+        <header class="seccion__cabeza">
+          <p class="sobretitulo">Agenda</p>
+          <h2>Visitas y eventos</h2>
+        </header>
+        <div class="filtros" role="group" aria-label="Filtrar eventos por tipo" id="filtrosEventos"></div>
+        <div class="eventos" id="listaEventos"></div>
+
+        <div class="registro" id="registro">
+          <div class="registro__intro">
+            <h3>Agenda tu visita al museo</h3>
+            <p>Colegios, familias y organizaciones pueden visitar el Museo Escolar de la Memoria o inscribirse en un evento. Tu registro queda guardado en la tabla <strong>Visitantes</strong>.</p>
+            <p class="nota">Los datos se usan únicamente para organizar la visita.</p>
+          </div>
+          <form class="formulario" id="formVisita" novalidate>
+            <div class="campo">
+              <label for="v-nombres">Nombres *</label>
+              <input id="v-nombres" name="nombres" required minlength="2" autocomplete="given-name">
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="v-apellidos">Apellidos *</label>
+              <input id="v-apellidos" name="apellidos" required minlength="2" autocomplete="family-name">
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="v-documento">Documento *</label>
+              <input id="v-documento" name="documento" required inputmode="numeric" pattern="[0-9]{6,12}">
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="v-correo">Correo *</label>
+              <input id="v-correo" name="correo" type="email" required autocomplete="email">
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="v-telefono">Teléfono</label>
+              <input id="v-telefono" name="telefono" type="tel" inputmode="numeric" pattern="[0-9]{7,10}" autocomplete="tel">
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="v-tipo">Tipo de visitante *</label>
+              <select id="v-tipo" name="tipo" required>
+                <option value="">Selecciona…</option>
+                <option>Estudiante</option><option>Docente</option><option>Familia</option><option>Comunidad</option><option>Institución</option>
+              </select>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo">
+              <label for="v-institucion">Institución</label>
+              <input id="v-institucion" name="institucion">
+            </div>
+            <div class="campo">
+              <label for="v-evento">Evento o visita</label>
+              <select id="v-evento" name="id_evento"><option value="">Visita guiada al museo</option></select>
+            </div>
+            <div class="campo">
+              <label for="v-fecha">Fecha deseada *</label>
+              <input id="v-fecha" name="fecha_visita" type="date" required>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="campo campo--ancho">
+              <label class="check"><input type="checkbox" name="acepta" required> Autorizo el tratamiento de mis datos para esta visita *</label>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <button class="btn btn--primario campo--ancho" type="submit">Registrar visita</button>
+            <p class="mensaje campo--ancho" role="status" id="msgVisita"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7. RECONOCIMIENTOS ================= -->
+    <section class="seccion seccion--oscura" id="reconocimientos">
+      <div class="contenedor">
+        <header class="seccion__cabeza">
+          <p class="sobretitulo">Logros</p>
+          <h2>Reconocimientos</h2>
+        </header>
+        <div class="reconocimientos" id="listaReconocimientos"></div>
+      </div>
+    </section>
+
+    <!-- ================= 8. ALIANZAS ================= -->
+    <section class="seccion" id="alianzas">
+      <div class="contenedor">
+        <header class="seccion__cabeza">
+          <p class="sobretitulo">Trabajo en red</p>
+          <h2>Alianzas institucionales</h2>
+        </header>
+        <ul class="aliados" id="listaAliados"></ul>
+      </div>
+    </section>
+
+    <!-- ================= 9. GALERÍA ================= -->
+    <section class="seccion seccion--papel" id="galeria">
+      <div class="contenedor">
+        <header class="seccion__cabeza">
+          <p class="sobretitulo">Evidencias</p>
+          <h2>Galería multimedia</h2>
+        </header>
+        <div class="filtros" role="group" aria-label="Filtrar galería" id="filtrosGaleria"></div>
+        <div class="galeria" id="gridGaleria"></div>
+        <button class="btn btn--oscuro centrado" id="verMas">Ver más fotografías</button>
+
+        <h3 class="subtitulo">Voces en la radio</h3>
+        <div class="audios" id="listaAudios"></div>
+
+        <h3 class="subtitulo">Videos y enlaces</h3>
+        <ul class="enlaces" id="listaEnlaces"></ul>
+      </div>
+    </section>
+
+    <!-- ================= 10. CONTACTO ================= -->
+    <section class="seccion" id="contacto">
+      <div class="contenedor dos-columnas">
+        <div>
+          <p class="sobretitulo">Escríbenos</p>
+          <h2>Contacto</h2>
+          <p>¿Quieres llevar el Museo Escolar de la Memoria a tu colegio, donar un objeto o proponer una alianza? Déjanos tu mensaje.</p>
+          <ul class="datos-contacto">
+            <li><strong>Institución:</strong> Colegio Tom Adams IED</li>
+            <li><strong>Localidad:</strong> Kennedy, Bogotá D.C.</li>
+            <li><strong>Sitio web:</strong> <a href="https://colegiotomadams.edu.co/" target="_blank" rel="noopener">colegiotomadams.edu.co</a></li>
+            <li><strong>Canales institucionales:</strong> Teams y Gnosoft</li>
+          </ul>
+        </div>
+        <form class="formulario formulario--simple" id="formContacto" novalidate>
+          <div class="campo">
+            <label for="c-nombre">Nombre *</label>
+            <input id="c-nombre" name="nombre" required minlength="3" autocomplete="name">
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="campo">
+            <label for="c-correo">Correo *</label>
+            <input id="c-correo" name="correo" type="email" required autocomplete="email">
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="campo">
+            <label for="c-asunto">Asunto *</label>
+            <select id="c-asunto" name="asunto" required>
+              <option value="">Selecciona…</option>
+              <option>Visita al museo</option><option>Donar un objeto o testimonio</option><option>Alianza institucional</option><option>Prensa</option><option>Otro</option>
+            </select>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="campo">
+            <label for="c-mensaje">Mensaje * <span class="contador" id="contador">0/500</span></label>
+            <textarea id="c-mensaje" name="mensaje" rows="5" required minlength="10" maxlength="500"></textarea>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <button class="btn btn--primario" type="submit">Enviar mensaje</button>
+          <p class="mensaje" role="status" id="msgContacto"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= PIE ================= -->
+  <footer class="pie">
+    <div class="contenedor pie__fila">
+      <div>
+        <p class="marca__texto">Restauradores de la Memoria</p>
+        <p>Proyecto del Colegio Tom Adams IED. Propuesta de portal desarrollada en el curso de Programación Web.</p>
+      </div>
+      <div>
+        <p><strong>Equipo:</strong> <span class="pendiente">[Nombre del equipo]</span></p>
+        <p><a href="admin.html">Panel de gestión (base de datos)</a> · <a href="museo.html">Museo virtual 3D</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Visor de imágenes -->
+  <dialog class="visor" id="visor" aria-label="Visor de imágenes">
+    <button class="visor__cerrar" id="visorCerrar" aria-label="Cerrar">×</button>
+    <button class="visor__nav visor__nav--ant" id="visorAnt" aria-label="Anterior">‹</button>
+    <figure>
+      <img id="visorImg" alt="">
+      <figcaption id="visorTxt"></figcaption>
+    </figure>
+    <button class="visor__nav visor__nav--sig" id="visorSig" aria-label="Siguiente">›</button>
+  </dialog>
+
+  <script src="js/datos.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

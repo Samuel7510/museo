@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de gestión | Restauradores de la Memoria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin">
+  <header class="encabezado">
+    <div class="contenedor encabezado__fila">
+      <a href="index.html" class="marca">
+        <span class="marca__sello" aria-hidden="true">RM</span>
+        <span class="marca__texto">Panel de gestión<br><small>Base de datos del proyecto</small></span>
+      </a>
+      <a href="index.html" class="btn btn--oscuro">← Volver al portal</a>
+    </div>
+  </header>
+
+  <main class="contenedor admin__cuerpo">
+    <nav class="admin__tablas" id="tablas" aria-label="Tablas de la base de datos"></nav>
+
+    <section class="admin__panel">
+      <div class="admin__barra">
+        <h1 id="tituloTabla">Tabla</h1>
+        <div class="admin__acciones">
+          <input type="search" id="buscar" placeholder="Buscar…" aria-label="Buscar en la tabla">
+          <button class="btn btn--primario" id="nuevo">+ Nuevo registro</button>
+        </div>
+      </div>
+      <div class="admin__tabla-scroll">
+        <table class="admin__tabla" id="tabla"></table>
+      </div>
+      <div class="admin__pie">
+        <button class="btn btn--claro" id="exportarSQL">Exportar SQL</button>
+        <button class="btn btn--claro" id="exportarJSON">Exportar JSON</button>
+        <button class="btn btn--claro" id="restaurar">Restaurar datos iniciales</button>
+      </div>
+      <p class="nota">Los datos se guardan en este navegador (localStorage) con la misma estructura que <code>database/restauradores_memoria.sql</code>. Exporta a SQL para cargarlos en MySQL.</p>
+    </section>
+  </main>
+
+  <dialog class="admin__dialogo" id="dialogo">
+    <form class="formulario" id="formRegistro" method="dialog" novalidate>
+      <h2 class="campo--ancho" id="tituloForm">Nuevo registro</h2>
+      <div class="campo--ancho admin__campos" id="campos"></div>
+      <div class="campo--ancho admin__botones">
+        <button type="button" class="btn btn--claro" id="cancelar">Cancelar</button>
+        <button type="submit" class="btn btn--primario">Guardar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="js/datos.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

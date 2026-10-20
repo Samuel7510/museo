@@ -1,0 +1,36 @@
+/* Panel de gestión de la base de datos */
+.admin__cuerpo { display: grid; grid-template-columns: 220px 1fr; gap: 2rem; padding: 2rem 0 4rem; }
+.admin__tablas { display: flex; flex-direction: column; gap: .3rem; position: sticky; top: calc(var(--alto-encabezado) + 1rem); align-self: start; }
+.admin__tablas button { text-align: left; font: 600 .98rem var(--fuente-texto); padding: .65em .9em; border-radius: 8px; border: 0; background: transparent; color: var(--tinta); cursor: pointer; display: flex; justify-content: space-between; }
+.admin__tablas button:hover { background: var(--papel-2); }
+.admin__tablas button[aria-current="true"] { background: var(--tinta); color: var(--papel); }
+.admin__tablas small { opacity: .7; }
+.admin__panel { min-width: 0; }
+.admin__barra { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.admin__barra h1 { font-size: 2rem; margin: 0; }
+.admin__acciones { display: flex; gap: .6rem; flex-wrap: wrap; }
+.admin__acciones input { font: inherit; padding: .6em .9em; border-radius: 999px; border: 1.5px solid var(--linea); background: var(--blanco); min-width: 220px; }
+.admin__tabla-scroll { overflow-x: auto; background: var(--blanco); border-radius: var(--radio); box-shadow: var(--sombra); }
+.admin__tabla { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.admin__tabla th, .admin__tabla td { padding: .7em .9em; text-align: left; border-bottom: 1px solid var(--papel-2); vertical-align: top; }
+.admin__tabla th { background: var(--papel-2); font-weight: 700; white-space: nowrap; position: sticky; top: 0; }
+.admin__tabla td { max-width: 280px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.admin__tabla tr:hover td { background: #fbf7ef; }
+.admin__tabla .acciones { white-space: nowrap; }
+.admin__tabla .acciones button { border: 0; background: var(--papel-2); border-radius: 6px; padding: .35em .7em; cursor: pointer; font: 600 .85rem var(--fuente-texto); margin-right: .3rem; }
+.admin__tabla .acciones button.borrar { background: #f6dcd6; color: var(--error); }
+.admin__pie { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.2rem 0 .6rem; }
+.admin__pie .btn--claro { color: var(--tinta); }
+.admin__dialogo { border: 0; border-radius: var(--radio); padding: 2rem; width: min(760px, 100% - 32px); max-height: 90vh; box-shadow: var(--sombra); background: var(--blanco); }
+.admin__dialogo::backdrop { background: rgba(30,26,23,.6); }
+.admin__campos { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.2rem; }
+.admin__campos .campo:has(textarea) { grid-column: 1 / -1; }
+.admin__botones { display: flex; justify-content: flex-end; gap: .6rem; }
+.admin__botones .btn--claro { color: var(--tinta); }
+@media (max-width: 760px) {
+  .admin__cuerpo { grid-template-columns: 1fr; }
+  .admin__tablas { position: static; flex-direction: row; overflow-x: auto; }
+  .admin__tablas button { white-space: nowrap; }
+  .admin__campos { grid-template-columns: 1fr; }
+  .admin__acciones input { min-width: 0; flex: 1; }
+}

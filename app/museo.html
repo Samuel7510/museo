@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Museo Virtual de la Memoria | Restauradores de la Memoria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/museo.css">
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/museo.js"></script>
+</head>
+<body>
+  <!-- ====== Interfaz HTML sobre la escena ====== -->
+  <div class="hud">
+    <a href="index.html" class="hud__btn">← Portal</a>
+    <p class="hud__titulo">Museo Virtual de la Memoria</p>
+    <button class="hud__btn" id="btnAyuda" aria-expanded="true" aria-controls="ayuda">?</button>
+  </div>
+
+  <aside class="ayuda" id="ayuda">
+    <h2>Cómo recorrer el museo</h2>
+    <ul>
+      <li><strong>Mirar:</strong> arrastra con el ratón o el dedo.</li>
+      <li><strong>Caminar:</strong> teclas W A S D o flechas, o los botones en pantalla.</li>
+      <li><strong>Saltar a un punto:</strong> haz clic o toca el piso.</li>
+      <li><strong>Ver una obra:</strong> haz clic sobre la foto o el objeto.</li>
+      <li><strong>Gafas VR:</strong> botón de la esquina inferior derecha.</li>
+    </ul>
+    <button class="boton" id="cerrarAyuda">Empezar recorrido</button>
+  </aside>
+
+  <div class="dpad" aria-label="Controles de movimiento">
+    <button data-dir="adelante" aria-label="Avanzar">▲</button>
+    <button data-dir="izquierda" aria-label="Izquierda">◀</button>
+    <button data-dir="atras" aria-label="Retroceder">▼</button>
+    <button data-dir="derecha" aria-label="Derecha">▶</button>
+  </div>
+
+  <dialog class="info" id="info">
+    <button class="info__cerrar" id="infoCerrar" aria-label="Cerrar">×</button>
+    <img id="infoImg" alt="">
+    <div class="info__cuerpo">
+      <p class="info__sala" id="infoSala"></p>
+      <h2 id="infoTitulo"></h2>
+      <p id="infoTexto"></p>
+      <p class="info__creditos" id="infoCreditos"></p>
+      <div class="info__enlaces" id="infoEnlaces"></div>
+    </div>
+  </dialog>
+
+  <!-- ====== Escena A-Frame ====== -->
+  <a-scene
+    renderer="antialias: true; colorManagement: true"
+    background="color: #1e1a17"
+    cursor="rayOrigin: mouse; fuse: false"
+    raycaster="objects: .interactivo; far: 40"
+    loading-screen="dotsColor: #d69a2d; backgroundColor: #1e1a17"
+    vr-mode-ui="enabled: true">
+
+    <!-- Visitante -->
+    <a-entity id="rig" position="0 0 16.8" limites mover-tactil>
+      <a-entity id="camara" camera position="0 1.6 0"
+                look-controls="pointerLockEnabled: false; magicWindowTrackingEnabled: true"
+                wasd-controls="acceleration: 22"></a-entity>
+      <a-entity laser-controls="hand: right" raycaster="objects: .interactivo; far: 30" line="color: #d69a2d"></a-entity>
+      <a-entity laser-controls="hand: left" raycaster="objects: .interactivo; far: 30" line="color: #d69a2d"></a-entity>
+    </a-entity>
+
+    <!-- Luces -->
+    <a-entity light="type: ambient; color: #fff3e0; intensity: 0.9"></a-entity>
+    <a-entity light="type: directional; color: #ffffff; intensity: 0.7" position="2 8 4"></a-entity>
+
+    <!-- Todo el edificio y la colección se construyen desde js/museo.js -->
+    <a-entity construir-museo></a-entity>
+  </a-scene>
+</body>
+</html>

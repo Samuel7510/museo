@@ -1,0 +1,22 @@
+OBJETOS 3D DEL MUSEO VIRTUAL (fotogrametría)
+=============================================
+
+El museo carga automáticamente estos archivos si existen:
+
+  models/objeto-1.glb   ->  pedestal "Corazón en la mano"
+  models/objeto-2.glb   ->  pedestal "Máscara de la memoria"
+
+Mientras no existan, el museo muestra una versión modelada con primitivas de A-Frame.
+
+Cómo generarlos con Luma AI (o Polycam / KIRI Engine / RealityScan):
+1. Coloca el objeto real sobre una mesa con buena luz y sin sombras duras.
+2. Graba un video o toma 50-150 fotos girando alrededor del objeto en 3 alturas
+   (abajo, a media altura y desde arriba). El objeto debe ocupar casi todo el encuadre.
+3. Sube la captura a Luma AI y espera el procesamiento.
+4. Descarga el resultado como "Mesh" en formato GLB (calidad media o baja: menos de 15 MB).
+5. Renómbralo como objeto-1.glb u objeto-2.glb y cópialo en esta carpeta.
+6. Recarga museo.html. El modelo se escala y centra solo sobre el pedestal.
+
+Para cambiar el objeto, el nombre o la descripción, edita la tabla
+Objetos_Museo desde admin.html (campo "Modelo 3D (.glb)").
+Recuerda registrar los créditos: quién capturó, con qué herramienta y la fecha.
